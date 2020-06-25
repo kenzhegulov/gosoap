@@ -24,7 +24,7 @@ type Params map[string]interface{}
 type ArrayParams [][2]interface{}
 
 // SoapClient return new *Client to handle the requests with the WSDL
-func SoapClient(wsdl string, httpClient *http.Client) (*Client, error) {
+func SoapClients(wsdl string, httpClient *http.Client) (*Client, error) {
 	_, err := url.Parse(wsdl)
 	if err != nil {
 		return nil, err
